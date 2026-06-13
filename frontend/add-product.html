@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Product</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Add New Product</h1>
+</header>
+
+<div class="card" style="max-width:400px;margin:30px auto;">
+
+    <input type="text" id="name" placeholder="Product Name">
+    <br><br>
+
+    <input type="number" id="price" placeholder="Price">
+    <br><br>
+
+    <input type="text" id="description" placeholder="Description">
+    <br><br>
+
+    <input type="text" id="category" placeholder="Category">
+    <br><br>
+
+    <input type="text" id="image" placeholder="Image URL">
+    <br><br>
+
+    <button onclick="addProduct()">
+        Add Product
+    </button>
+
+</div>
+
+<script>
+
+async function addProduct() {
+    alert("Button Clicked");
+
+    const name =
+        document.getElementById("name").value;
+
+    const price =
+        document.getElementById("price").value;
+
+    const description =
+        document.getElementById("description").value;
+
+    const category =
+        document.getElementById("category").value;
+
+    const image =
+        document.getElementById("image").value;
+
+    const res = await fetch(
+        "http://localhost:5000/products",
+        {
+            method: "POST",
+
+            headers: {
+                "Content-Type":
+                "application/json"
+            },
+
+            body: JSON.stringify({
+                name,
+                price,
+                description,
+                category,
+                image
+            })
+        }
+    );
+
+    const data = await res.json();
+
+    alert("Product Added Successfully ✅");
+
+    window.location.href = "index.html";
+}
+
+</script>
+
+</body>
+</html>
