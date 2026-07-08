@@ -2,20 +2,37 @@
 <html>
 <head>
     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<h1>Login</h1>
+<body class="login-page">
 
-<input type="email" id="email" placeholder="Email">
-<br><br>
+<div class="login-box">
 
-<input type="password" id="password" placeholder="Password">
-<br><br>
+    <h1>Login</h1>
 
-<button onclick="login()">
-    Login
-</button>
+    <input
+        type="email"
+        id="email"
+        placeholder="Enter Email"
+    >
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter Password"
+    >
+
+    <button onclick="login()">
+        Login
+    </button>
+
+    <p>
+        Don't have an account?
+        <a href="register.html">Register</a>
+    </p>
+
+</div>
 
 <script src="login.js"></script>
 
