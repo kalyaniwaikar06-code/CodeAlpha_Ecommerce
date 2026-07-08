@@ -38,15 +38,49 @@ async function loadOrders() {
 
     data.forEach(order => {
 
-        html += `
-            <div class="card">
-                <h3>${order.customerName}</h3>
-                <p>Total Amount: ₹${order.totalAmount}</p>
-            </div>
-        `;
-    });
+    html += `
+    
+    <div class="order-card">
+
+        <h3>📦 Order Placed</h3>
+
+        <p><strong>Customer:</strong> ${order.customerName}</p>
+
+        <p><strong>Total Amount:</strong> <span>₹${order.totalAmount}</span></p>
+
+        <p><strong>Status:</strong> ✅ Delivered</p>
+
+    </div>
+
+    `;
+
+});
 
     ordersDiv.innerHTML = html;
+}
+
+async function clearHistory() {
+
+    const user =
+        JSON.parse(localStorage.getItem("user"));
+
+    if (!confirm("Are you sure you want to clear all order history?")) {
+        return;
+    }
+
+    const res = await fetch(
+        `http://localhost:5000/orders/${user.name}`,
+        {
+            method: "DELETE"
+        }
+    );
+
+    const data = await res.json();
+
+    alert(data.message);
+
+    loadOrders();
+
 }
 
 // IMPORTANT

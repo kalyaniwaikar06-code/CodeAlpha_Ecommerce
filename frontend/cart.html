@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-    <h1>Your Cart 🛒</h1>
+<div class="cart-container">
 
-    <div id="cart-container"></div>
+    <h1 class="cart-title">
+        🛒 Your Shopping Cart
+    </h1>
 
-    <h2 id="total"></h2>
-    <button onclick="placeOrder()">
-    Place Order
-</button>
+    <div id="cart-container" class="cart-items">
 
-    <br>
+    </div>
 
-    <a href="index.html">
-        <button>⬅ Back To Store</button>
-    </a>
+    <h2 id="total" class="total-price"></h2>
 
-    <script src="cart.js"></script>
+    <div class="cart-buttons">
+
+        <button class="place-order"
+        onclick="placeOrder()">
+            Place Order
+        </button>
+
+        <a href="index.html">
+
+            <button class="back-store">
+                ⬅ Back To Store
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+<script src="cart.js"></script>
 
 </body>
 </html>

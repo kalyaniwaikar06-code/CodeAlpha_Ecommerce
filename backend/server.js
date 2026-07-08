@@ -147,6 +147,38 @@ app.get("/orders/:customerName", async (req, res) => {
 });
 
 // ========================
+// CLEAR ORDER HISTORY
+// ========================
+
+app.delete("/orders/:customerName", async (req, res) => {
+
+    try {
+
+        await Order.deleteMany({
+
+            customerName: req.params.customerName
+
+        });
+
+        res.json({
+
+            message: "Order History Cleared Successfully"
+
+        });
+
+    }
+
+    catch(err){
+
+        console.log(err);
+
+        res.status(500).send(err);
+
+    }
+
+});
+
+// ========================
 // REGISTER
 // ========================
 app.post("/register", async (req, res) => {
