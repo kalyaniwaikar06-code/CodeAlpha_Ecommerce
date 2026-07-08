@@ -4,15 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Add Product</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
 
-<header>
+<body class="add-product-page">
+
+<div class="add-product-box">
+
     <h1>Add New Product</h1>
-</header>
-
-<div class="card" style="max-width:400px;margin:30px auto;">
 
     <input type="text" id="name" placeholder="Product Name">
     <br><br>
@@ -38,7 +39,6 @@
 <script>
 
 async function addProduct() {
-    alert("Button Clicked");
 
     const name =
         document.getElementById("name").value;
@@ -61,8 +61,7 @@ async function addProduct() {
             method: "POST",
 
             headers: {
-                "Content-Type":
-                "application/json"
+                "Content-Type": "application/json"
             },
 
             body: JSON.stringify({

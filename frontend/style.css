@@ -162,3 +162,152 @@ color:#222;
 
     font-weight:bold;
 }
+
+
+/* ===========================
+   ADD PRODUCT PAGE
+=========================== */
+
+.add-product-page{
+
+    margin:0;
+    padding:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+
+    font-family:Arial, sans-serif;
+
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+.add-product-box{
+
+    width:420px;
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+
+    text-align:center;
+}
+
+.add-product-box h1{
+
+    color:#0d6efd;
+
+    margin-bottom:25px;
+}
+
+.add-product-box input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+}
+
+.add-product-box button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#28a745;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.add-product-box button:hover{
+
+    background:#218838;
+
+    transform:scale(1.02);
+}
+
+
+/* WELCOME PAGE */
+
+.welcome-page{
+
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+
+}
+
+.welcome-box{
+
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+.logo{
+
+    font-size:90px;
+
+}
+
+.welcome-box h1{
+
+    color:#28a745;
+    margin:15px 0;
+
+}
+
+.welcome-box p{
+
+    color:#666;
+    margin-bottom:25px;
+
+}
+
+.welcome-box button{
+
+    background:#28a745;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+
+}
+
+.welcome-box button:hover{
+
+    background:#218838;
+
+}
